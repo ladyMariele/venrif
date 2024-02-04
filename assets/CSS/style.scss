@@ -1,0 +1,130 @@
+$base-color: hsl(237, 26%, 16%);
+$neutral-color: hsl(237, 26%, 31%);
+$light-color: hsl(237, 26%, 50%);
+$dark-color: hsl(240, 50%, 1%);
+$grey-color1: hsl(0, 0%, 13%);
+$font-color1: hsl(258, 9%, 37%);
+$accent-color: hsl(342, 57%, 40%);
+
+* {
+    font-family: "Lexend Deca";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    color: $font-color1;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: $base-color !important;
+    
+    h1 {
+        color: $accent-color;
+    }
+}
+
+#venrif {
+    background-image: linear-gradient( $neutral-color, $base-color);
+
+    nav{
+        background-image: linear-gradient($grey-color1, $neutral-color) !important;
+        margin-bottom: 5em;
+
+        .nav-link:hover {
+            color: $accent-color ;
+        }
+
+        .dropdown-item:hover {
+            color:$grey-color1 !important;
+          }
+        .dropdown-item:active {
+            background-color:$accent-color;
+          }
+    }
+
+    img {
+        width: 50vmin;
+        height: auto;
+        padding: 1em 0 0.5em 0;
+        margin: 0 3em 0 0;
+    }
+    
+    .trailer-container {
+        position: relative;
+        overflow: hidden;
+        margin: auto;
+        width: 75%;
+        padding-top: 56.25%; /* Aspect ratio: 16:9 */
+        filter: drop-shadow(0px 0px 20px hsla(342, 57%, 40%, 0.199));
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70%;
+            border: 0;
+        }
+    }
+}
+
+
+#gameplay {
+    color: $font-color1;
+
+    article {
+        color: hsla(341, 15%, 33%, 0.993);
+    }
+
+}
+
+#the-project {
+    background-image: linear-gradient($base-color, $grey-color1);
+    padding: 5em 2em 8em 2em !important;
+    
+}
+
+#direction {
+    background-image: linear-gradient($grey-color1, $base-color);
+    padding: 5em 2em 8em 2em !important;
+}
+
+#about-us {
+    background-image: url(/assets/images/background.jpg);
+}
+
+#footer {
+    background-image: linear-gradient($dark-color, $base-color);
+
+    img {
+        width: 150px;
+    }
+}
+
+// media screen - for more than 1000px
+
+@media screen and (min-width: 1001px) {
+    
+    nav {
+        padding: 0 10em !important;
+
+        .nav-item {
+            margin: 0 1em;
+        }
+    }
+    .div-container {
+        width: 810px;
+        margin: auto;
+        p {
+            font-size: large;
+        }
+    }
+
+    article {
+        p {
+            width: 450px;
+            margin: auto;
+        }
+    }
+  }
